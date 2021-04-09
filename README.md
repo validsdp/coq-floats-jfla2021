@@ -21,6 +21,8 @@ opam install coq-interval
 opam pin add -n -y -k git coq-mathcomp-multinomials.1.5.4 https://github.com/erikmd/multinomials.git#make-1.5.4
 opam pin add -n -y -k git coq-validsdp.dev https://github.com/validsdp/validsdp.git#master
 opam install coq-validsdp -j2
+
+coqc matrice.v
 ```
 
 ## Article
