@@ -231,7 +231,7 @@ Eval compute in length A.
 
 Require Import ValidSDP.posdef_check.
 
-(** d'abord avec des flottants émulés (bigZ) *)
+(** d'abord avec des flottants émulés (bigZ) : ~3.6 s *)
 Lemma with_bigint : posdef_seqF A.
 Time posdef_check.
 Qed.
@@ -242,7 +242,7 @@ Print Assumptions with_bigint.
 (* Int63.mul_spec : forall x y : Int63.int, Int63.to_Z (Int63.mul x y)
    = BinInt.Z.modulo (BinInt.Z.mul (Int63.to_Z x) (Int63.to_Z y)) Int63.wB *)
 
-(** puis avec des flottants primitifs *)
+(** puis avec des flottants primitifs : ~0.2 s *)
 Lemma with_prim_float : posdef_seqF A.
 Time primitive_posdef_check.
 Qed.
